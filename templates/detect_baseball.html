@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>VisualLink</title>
+</head>
+
+<body>
+    <header class="App-header" style="margin-top:50px;margin-left:25%">
+        <h2> Video </h2>
+    </header>
+
+    <!-- <div width="10%" margin="auto">
+        <div float="left">
+            <img src="{{ url_for('video') }}" />
+        </div>
+        <div float="left">
+            <img src="{{ url_for('image') }}" />
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- 1 of 2 -->
+                <img src="{{ url_for('video') }}" width="100%" />
+
+            </div>
+            <div class="col">
+                <!-- 2 of 2 -->
+                <div class="row">
+                    <button name="send" class="sendbutton" id="sendbutton">Get Links</button>
+                </div>
+                <div class="row">
+                </div>
+
+                <div id="link" visibility="hidden">
+                    <div class="row">
+                        Baseball Bat
+                    </div>
+                    <div class="row">
+                        <img src="{{ url_for('image') }}" />
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <a href="https://www.etsy.com/listing/1038684674/a-minor-bass-flute-the-mage" target="_blank">A minor bass flute " The Mage " (etsy.com)</a>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <a href="https://www.walmart.com/ip/8-Wooden-Handrail-Piece-for-Fanta-Sea-Pools/863925432" target="_blank">8' Wooden Handrail Piece for Fanta-Sea Pools (walmart.com) </a>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <a href="https://commons.wikimedia.org/wiki/File:Deichel_auf_dem_Wanderparkplatz_oberhalb_von_S%C3%B6lden.jpg" target="_blank">(wikipedia.org)</a>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <a href="https://www.ebay.com/itm/175432029870" target="_blank">1965 Roger Maris Yankees Bat Day Bat - Louisville PRO Hillerich & Bradley Co.  (ebay.com)</a>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <a href="https://loghomemart.com/products/8-ft-cedar-rail" target="_blank">8' Horizontal Cedar Deck & Loft Log Rails (loghomemart.com)</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+        document.getElementById("link").style.display = "none";
+        document.getElementById("sendbutton").onclick = function() {
+            document.getElementById("link").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
